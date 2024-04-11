@@ -1,0 +1,68 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "users" as u {
+    *id: bigserial **PK**
+    --
+    *email: text
+    *created_at: tz
+    blocked_at: tz
+}
+
+entity "tasks" as t {
+  *id: bigserial **PK**
+  --
+  parent_task_id: bigint **IX1**
+  *number: text **UK**
+  *title: text
+  description: text
+  *status: int **IX2**
+  *created_at: tz not null
+  *created_by_user_id: bigint
+  assigned_to_user_id: bigint
+  completed_at: tz
+}
+
+entity "task_comments" as tc {
+    *id: bigserial **PK**
+    --
+    *task_id: bigint
+    *author_user_id: bigint
+    *message: text
+    *at: tz
+}
+
+entity "task_statuses" as ts {
+    *id: int **PK**
+    --
+    *alias: text **UK**
+    *name: text
+    description: text
+}
+
+entity "task_logs" as tl {
+  *id: bigserial **PK**
+  --
+  *task_id: bigint
+  parent_task_id: bigint
+  *number: text
+  *title: text
+  description: text
+  *status: int
+  *created_by_user_id: bigint
+  assigned_to_user_id: bigint
+  --
+  *user_id: bigint
+  *at: tz
+}
+
+t  ||--|{ t
+t  ||..|{ tl
+t  ||-right-|{ tc
+u  ||--|{ t
+u  ||..|{ tl
+ts ||-left-|{ t
+ts ||.left.|{ tl
+
+@enduml
