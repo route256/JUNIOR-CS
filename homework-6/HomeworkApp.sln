@@ -1,0 +1,67 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkApp", "src\HomeworkApp\HomeworkApp.csproj", "{3DBECF9F-F9B1-451F-8DB3-FEEF7F3A41F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F713B26E-84BA-40F3-822F-28F66CB87C66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkApp.Proto", "src\HomeworkApp.Proto\HomeworkApp.Proto.csproj", "{12042BD0-AC06-4044-BCA1-6FF0751003CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkApp.Dal", "src\HomeworkApp.Dal\HomeworkApp.Dal.csproj", "{5E796A80-C122-43D9-876E-9FFCCD37A6FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FA1F6E3C-0C90-4F1F-BA9E-991D9EA7B831}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aux", "aux", "{2E9AA310-F44C-41F0-8E99-8066559397E4}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkApp.IntegrationTests", "tests\HomeworkApp.IntegrationTests\HomeworkApp.IntegrationTests.csproj", "{AF2374C9-1701-447A-92DC-24FE1247303B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkApp.Bll", "src\HomeworkApp.Bll\HomeworkApp.Bll.csproj", "{03452615-FCB4-42C6-9EBF-48CFE58184E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{0348D67D-DE81-4353-B504-5F49A120E8E9}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DBECF9F-F9B1-451F-8DB3-FEEF7F3A41F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBECF9F-F9B1-451F-8DB3-FEEF7F3A41F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBECF9F-F9B1-451F-8DB3-FEEF7F3A41F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBECF9F-F9B1-451F-8DB3-FEEF7F3A41F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12042BD0-AC06-4044-BCA1-6FF0751003CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12042BD0-AC06-4044-BCA1-6FF0751003CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12042BD0-AC06-4044-BCA1-6FF0751003CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12042BD0-AC06-4044-BCA1-6FF0751003CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E796A80-C122-43D9-876E-9FFCCD37A6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E796A80-C122-43D9-876E-9FFCCD37A6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E796A80-C122-43D9-876E-9FFCCD37A6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E796A80-C122-43D9-876E-9FFCCD37A6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF2374C9-1701-447A-92DC-24FE1247303B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF2374C9-1701-447A-92DC-24FE1247303B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF2374C9-1701-447A-92DC-24FE1247303B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF2374C9-1701-447A-92DC-24FE1247303B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03452615-FCB4-42C6-9EBF-48CFE58184E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03452615-FCB4-42C6-9EBF-48CFE58184E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03452615-FCB4-42C6-9EBF-48CFE58184E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03452615-FCB4-42C6-9EBF-48CFE58184E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DBECF9F-F9B1-451F-8DB3-FEEF7F3A41F6} = {F713B26E-84BA-40F3-822F-28F66CB87C66}
+		{12042BD0-AC06-4044-BCA1-6FF0751003CD} = {F713B26E-84BA-40F3-822F-28F66CB87C66}
+		{5E796A80-C122-43D9-876E-9FFCCD37A6FE} = {F713B26E-84BA-40F3-822F-28F66CB87C66}
+		{AF2374C9-1701-447A-92DC-24FE1247303B} = {FA1F6E3C-0C90-4F1F-BA9E-991D9EA7B831}
+		{03452615-FCB4-42C6-9EBF-48CFE58184E4} = {F713B26E-84BA-40F3-822F-28F66CB87C66}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option csharp_namespace = "WorkshopApp.Proto.Client";
+
+package workshop_app.proto.client.enums;
+
+enum TaskStatus {
+  TASK_STATUS_UNKNOWN = 0;
+  TASK_STATUS_DRAFT = 1;
+  TASK_STATUS_TO_DO = 2;
+  TASK_STATUS_IN_PROGRESS = 3;
+  TASK_STATUS_DONE = 4;
+  TASK_STATUS_CANCELED = 5;
+}

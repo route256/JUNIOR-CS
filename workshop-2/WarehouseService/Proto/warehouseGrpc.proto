@@ -1,0 +1,81 @@
+﻿syntax = "proto3";
+import "google/api/annotations.proto";
+package warehouse_grpc;
+
+service WarehouseGrpcService{
+    rpc GetWarehouseList (GetWarehouseListRequest) returns (GetWarehouseListResponse){
+        option (google.api.http) = {
+            get: "/v1/warehouse/get-list"
+        };
+    }
+    rpc GetWarehouseById (GetWarehouseByIdRequest) returns (GetWarehouseByIdResponse){
+        option (google.api.http) = {
+            get: "/v1/warehouse/get"
+        };
+    }
+    rpc GetWarehouseByCoordinate (GetWarehouseByCoordinateRequest) returns (GetWarehouseByCoordinateResponse){
+        option (google.api.http) = {
+            post: "/v1/warehouse/get-by-coordinate",
+            body:"*"
+        };
+    }
+    rpc CreateWarehouse (CreateWarehouseRequest) returns (CreateWarehouseResponse){
+        option (google.api.http) = {
+            post: "/v1/warehouse/create",
+            body:"*"
+        };
+    }
+}
+
+message GetWarehouseListRequest{ }
+
+message GetWarehouseListResponse{
+    repeated  WarehouseModel warehouses = 1;
+}
+
+message GetWarehouseByIdRequest{
+    int64 id = 1;
+}
+
+message GetWarehouseByIdResponse{
+    WarehouseModel warehouse = 1;
+}
+
+message GetWarehouseByCoordinateRequest{
+    PointModel point = 1;
+}
+
+message GetWarehouseByCoordinateResponse{
+    WarehouseModel warehouse = 1;
+}
+
+message CreateWarehouseRequest{
+    WarehouseModel warehouse = 1;
+}
+
+message CreateWarehouseResponse{
+    bool result = 1;
+}
+
+message WarehouseModel {
+    int64 warehouse_id = 1;
+    string warehouse_name = 2;
+    repeated WorkDay work_days = 3;
+    PointModel coordinate = 4;
+}
+
+message PointModel {
+    double x = 1;
+    double y = 2;
+}
+
+enum WorkDay {
+    WORK_DAY_SUNDAY = 0;
+    WORK_DAY_MONDAY = 1;
+    WORK_DAY_TUESDAY = 2;
+    WORK_DAY_WEDNESDAY = 3;
+    WORK_DAY_THURSDAY = 4;
+    WORK_DAY_FRIDAY = 5;
+    WORK_DAY_SATURDAY = 6;
+}
+        
